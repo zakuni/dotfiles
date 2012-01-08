@@ -1,11 +1,65 @@
+set nocompatible
+
+""" Vundle設定 """
+filetype off
+
+if has('win32') || has('win64')
+  let $DOTVIM = expand('~/vimfiles')
+else
+  let $DOTVIM = expand('~/.vim')
+endif
+set rtp+=$DOTVIM/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+" My Bundles here:
+"
+" original repos on github
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'tpope/vim-endwise'
+Bundle 'digitaltoad/vim-jade'
+Bundle 'bbommarito/vim-slim'
+Bundle 'tpope/vim-rails'
+" vim-scripts repos
+Bundle 'AutoComplPop'
+Bundle 'L9'
+Bundle 'The-NERD-tree'
+" non github repos
+"Bundle 'git://git.wincent.com/command-t.git'
+
+filetype plugin indent on     " required! 
+"
+" Brief help
+" :BundleList          - list configured bundles
+" :BundleInstall(!)    - install(update) bundles
+" :BundleSearch(!) foo - search(or refresh cache first) for foo
+" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+"
+" see :h vundle for more details or wiki for FAQ
+" NOTE: comments after Bundle command are not allowed..
+""" Vundle設定ここまで """
+
 set nobackup
 syntax enable
 set background=dark
 
 set number
 set shiftwidth=2
-call pathogen#infect()
 filetype plugin indent on
+
+""" NERDTree 設定 """
+
+" ファイルを指定せずにVimを起動したらNERDTreeを開く
+autocmd vimenter * if !argc() | NERDTree | endif
+
+" 開いているのがNERDTreeだけになったらvimを閉じる
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+""" NERDTree 設定ここまで """
+
 
 "カレントディレクトリを開いているファイルのところに
 au   BufEnter *   execute ":lcd " . expand("%:p:h")
