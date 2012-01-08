@@ -1,0 +1,3 @@
+## Using vimrc 
+    
+    :BundleInstall
