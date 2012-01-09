@@ -19,7 +19,7 @@ case ${UID} in
     SPROMPT="%B%{[36m%}%r is correct? [n,y,a,e]:%{[m%}%b "
 		# ssh時は 緑色(%{[32m%}) ユーザー名(%n) @(@) ホスト(${HOST%%.*}) 特権付きなら#,でなければ%(%#) 色をリセット(%{[m%})
     [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && 
-    PROMPT="%{[32m%}%n@${HOST%%.*}%#%[m%}"
+    PROMPT="%{[32m%}%n@${HOST%%.*}%#%{[m%}"
     ;;
 *)
 ## 一般ユーザの設定
@@ -28,7 +28,7 @@ case ${UID} in
     SPROMPT="%{[36m%}%r is correct? [n,y,a,e]:%{[m%} "
 		# ssh時は 緑色(%{[32m%}) ユーザー名(%n) @(@) ホスト(${HOST%%.*}) %(%%) 色をリセット(%{[m%})
     [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && 
-    PROMPT="%{[32m%}%n@${HOST%%.*}%%%[m%}"
+    PROMPT="%{[32m%}%n@${HOST%%.*}%%%{[m%}"
     ;;
 esac
 
