@@ -48,12 +48,13 @@ set background=dark
 
 set number
 set shiftwidth=2
+set tabstop=2
 filetype plugin indent on
 
 """ NERDTree 設定 """
 
 " ファイルを指定せずにVimを起動したらNERDTreeを開く
-autocmd vimenter * if !argc() | NERDTree | endif
+"autocmd vimenter * if !argc() | NERDTree | endif
 
 " 開いているのがNERDTreeだけになったらvimを閉じる
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
