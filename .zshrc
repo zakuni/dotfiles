@@ -1,3 +1,4 @@
+# カレントディレクトリを右に表示
 RPROMPT="[%/]"    
 
 case ${UID} in
@@ -17,6 +18,9 @@ case ${UID} in
     ;;
 esac
 
+## 補完時に大小文字を区別しない
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+zstyle ':completion:*' menu select=1
 
 alias redcar=wrapped_redcar
 alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
