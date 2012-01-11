@@ -66,10 +66,10 @@ setopt complete_aliases
 ## lsに色をつける
 case "${OSTYPE}" in
 freebsd*|darwin*)
-  alias ls="ls -F -G -w"
+  alias ls="ls -G -w -F"
   ;;
 linux*)
-  alias ls="ls --color"
+  alias ls="ls --color -F"
   ;;
 esac
 
@@ -101,10 +101,10 @@ kterm*|xterm*)
   precmd() {
     echo -ne "\033]0;${USER}@${HOST%%.*}:${PWD}\007"
   }
-  export LSCOLORS=exfxcxdxbxegedabagacad
-  export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
+  export LSCOLORS=Exfxcxdxbxegedabagacad
+  export LS_COLORS='di=01;34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
   zstyle ':completion:*' list-colors \
-    'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
+    'di=;34;1' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
   ;;
 esac
 
