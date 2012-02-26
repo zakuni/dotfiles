@@ -65,9 +65,19 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 "カレントディレクトリを開いているファイルのところに
 au   BufEnter *   execute ":lcd " . expand("%:p:h")
 
-imap { {}<LEFT>
-imap [ []<LEFT>
-imap ( ()<LEFT>
+"imap { {}<LEFT>
+"imap [ []<LEFT>
+"imap ( ()<LEFT>
+
+"検索結果のハイライトをESC連打で消す
+set hlsearch
+noremap <Esc><Esc> :nohlsearch<CR><Esc>
+
+"for US Keyboard
+"コロンセミコロン入れ変え
+noremap ; :
+noremap : ;
+
 
 " solarized options
 "let g:solarized_termcolors=256
