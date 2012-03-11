@@ -27,6 +27,10 @@ Bundle 'tpope/vim-rails'
 Bundle 'AutoComplPop'
 Bundle 'L9'
 Bundle 'The-NERD-tree'
+Bundle 'vim-coffee-script'
+Bundle 'Processing'
+" Bundle 'snipMate'
+" Bundle 'processing-snipmate'
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
 
