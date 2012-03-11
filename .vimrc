@@ -142,3 +142,5 @@ endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 " }}} Autocompletion using the TAB key
 
+" rbファイル作成時にマジックコメントを追加
+autocmd BufNewFile *.rb 0r ~/.vim/templates/rb.tpl
