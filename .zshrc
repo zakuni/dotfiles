@@ -118,7 +118,10 @@ export PATH=$PATH:~/phonegap-android/bin
 
 export GISTY_DIR="$HOME/Documents/gist"
 
+# rvm
 if [[ -s $HOME/.rvm/scripts/rvm ]] ; then source $HOME/.rvm/scripts/rvm ; fi
 
 . ~/.nvm/nvm.sh
 # nvm use "v0.4.10"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
