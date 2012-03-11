@@ -10,6 +10,7 @@ endif
 
 set nobackup
 set transparency=30
+set imdisable
 
 let g:save_window_file = expand('~/.vimwinpos')
 augroup SaveWindow
