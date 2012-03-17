@@ -1,50 +1,63 @@
 set nocompatible
 
-""" Vundle設定 """
+;" NeoBundle設定ここから """
 filetype off
 
 if has('win32') || has('win64')
   let $DOTVIM = expand('~/vimfiles')
+	let $BUNDLE = expand('~/vimfiles/bundle')
 else
   let $DOTVIM = expand('~/.vim')
+	let $BUNDLE = expand('~/.vim/bundle/')
 endif
-set rtp+=$DOTVIM/bundle/vundle/
-call vundle#rc()
 
-" let Vundle manage Vundle
+if has('vim_starting')
+  set runtimepath+=$DOTVIM/bundle/neobundle.vim
+	call neobundle#rc($BUNDLE)
+endif
+
+" let NeoBndle manage NeoBundle 
 " required! 
-Bundle 'gmarik/vundle'
+NeoBundle 'Shougo/neobundle.vim'
+" recommended to install
+" NeoBundle 'Shougo/vimproc'
+" after install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
+" NeoBundle 'Shougo/vimshell'
+" NeoBundle 'Shougo/unite.vim'
 
 " My Bundles here:
 "
 " original repos on github
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'tpope/vim-endwise'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'bbommarito/vim-slim'
-Bundle 'tpope/vim-rails'
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'tpope/vim-endwise'
+NeoBundle 'digitaltoad/vim-jade'
+NeoBundle 'bbommarito/vim-slim'
+NeoBundle 'tpope/vim-rails'
 " vim-scripts repos
-Bundle 'AutoComplPop'
-Bundle 'L9'
-Bundle 'The-NERD-tree'
-Bundle 'vim-coffee-script'
-Bundle 'Processing'
-" Bundle 'snipMate'
-" Bundle 'processing-snipmate'
+NeoBundle 'AutoComplPop'
+NeoBundle 'L9'
+NeoBundle 'The-NERD-tree'
+NeoBundle 'vim-coffee-script'
+NeoBundle 'Processing'
+" NeoBundle 'IndentHL'
+NeoBundle 'Indent-Highlight'
+NeoBundle 'Indent-Guides'
+" NeoBundle 'snipMate'
+" NeoBundle 'processing-snipmate'
 " non github repos
-"Bundle 'git://git.wincent.com/command-t.git'
+"NeoBundle 'git://git.wincent.com/command-t.git'
 
 filetype plugin indent on     " required! 
 "
 " Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+" :NeoBundleList          - list configured bundles
+" :NeoBundleInstall(!)    - install(update) bundles
+" :NeoBundleSearch(!) foo - search(or refresh cache first) for foo
+" :NeoBundleClean(!)      - confirm(or auto-approve) removal of unused bundles
 "
 " see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed..
-""" Vundle設定ここまで """
+" NOTE: comments after NeoBundle command are not allowed..
+""" NeoBundle設定ここまで """
 
 set nobackup
 syntax enable
@@ -144,3 +157,8 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 
 " rbファイル作成時にマジックコメントを追加
 autocmd BufNewFile *.rb 0r ~/.vim/templates/rb.tpl
+
+" IndentGuides設定
+let g:indent_guides_color_change_percent = 5
+" let g:indent_guides_guide_size = 1
+" let g:indent_guides_start_level = 2

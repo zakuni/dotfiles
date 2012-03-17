@@ -1,5 +1,6 @@
 set background=light
-colorscheme anotherdark
+"colorscheme anotherdark
+colorscheme solarized
 
 "起動時フルスクリーン
 if has("gui_running")
@@ -7,9 +8,14 @@ if has("gui_running")
   au GUIEnter * set fullscreen
 endif
 
+" ツールバーを削除
+set guioptions-=T
+
+"メニューを削除
+set guioptions-=m
 
 set nobackup
-set transparency=30
+set transparency=7
 set imdisable
 
 let g:save_window_file = expand('~/.vimwinpos')
