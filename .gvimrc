@@ -15,7 +15,7 @@ set guioptions-=T
 set guioptions-=m
 
 set nobackup
-set transparency=7
+set transparency=10
 set imdisable
 
 let g:save_window_file = expand('~/.vimwinpos')
