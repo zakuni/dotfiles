@@ -1,6 +1,7 @@
 set background=light
 "colorscheme anotherdark
 colorscheme solarized
+"colorscheme desert
 
 "起動時フルスクリーン
 if has("gui_running")
@@ -15,7 +16,7 @@ set guioptions-=T
 set guioptions-=m
 
 set nobackup
-set transparency=10
+set transparency=5
 set imdisable
 
 let g:save_window_file = expand('~/.vimwinpos')

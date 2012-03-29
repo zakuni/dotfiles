@@ -39,6 +39,7 @@ NeoBundle 'L9'
 NeoBundle 'The-NERD-tree'
 NeoBundle 'vim-coffee-script'
 NeoBundle 'Processing'
+NeoBundle 'vim-stylus'
 " NeoBundle 'IndentHL'
 NeoBundle 'Indent-Highlight'
 NeoBundle 'Indent-Guides'
@@ -104,7 +105,7 @@ noremap : ;
 "colorscheme default 
 "colorscheme delek 
 "colorscheme darkblue 
-"colorscheme desert 
+colorscheme desert 
 "colorscheme elflord 
 "colorscheme evening 
 "colorscheme koehler 
@@ -131,7 +132,7 @@ noremap : ;
 "colorscheme rcg_gui
 "colorscheme thestars
 "colorscheme twilight
-colorscheme zmrok
+"colorscheme zmrok
 
 autocmd FileType * let g:AutoComplPop_CompleteOption = '.,w,b,u,t,i'
 
