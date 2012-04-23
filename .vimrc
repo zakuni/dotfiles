@@ -45,6 +45,7 @@ NeoBundle 'Indent-Highlight'
 NeoBundle 'Indent-Guides'
 " NeoBundle 'snipMate'
 " NeoBundle 'processing-snipmate'
+NeoBundle 'quickrun'
 " non github repos
 "NeoBundle 'git://git.wincent.com/command-t.git'
 
@@ -64,9 +65,10 @@ set nobackup
 syntax enable
 set background=dark
 
+set expandtab
 set number
 set shiftwidth=2
-set tabstop=2
+set tabstop=8
 filetype plugin indent on
 
 """ NERDTree 設定 """
