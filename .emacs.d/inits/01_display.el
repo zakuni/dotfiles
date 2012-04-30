@@ -1,9 +1,17 @@
 (require 'color-theme)
+(require 'color-theme-solarized)
 (color-theme-initialize)
 ;;(color-theme-clarity)
 ;;(color-theme-andreas)
 ;;(color-theme-aliceblue)
-(color-theme-blippblopp)
+;;(color-theme-blippblopp)
+
+;; solarized
+(color-theme-solarized-light)
+(add-hook 'window-setup-hook '(lambda () (set-cursor-color "gray")))
+(add-hook 'after-make-frame-functions '(lambda (f) (with-selected-frame f (set-cursor-color "gray"))))
+
+(global-hl-line-mode)
 
 (custom-set-variables
  '(split-width-threshold 100) 
@@ -49,3 +57,5 @@
 (set-face-background 'whitespace-tab "DarkSlateGray")
 
 (global-linum-mode)
+
+

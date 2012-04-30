@@ -14,3 +14,5 @@
 (set-language-environment 'Japanese)
 ; 極力UTF-8�¨する
 (prefer-coding-system 'utf-8)
+
+(setq-default tab-width 2 indent-tabs-mode nil)

@@ -7,3 +7,4 @@
 
 ;; anything ショートカット
 (global-set-key (kbd "C-]") 'anything) 
+(global-set-key (kbd "C-'") 'anything)

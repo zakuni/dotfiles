@@ -9,7 +9,7 @@
 (add-to-list 'load-path "~/.emacs.d/plugins")
 (add-to-list 'load-path (expand-file-name "~/elisp"))
 (add-to-list 'load-path "~/.emacs.d/auto-install")
-
+(add-to-list 'load-path "~/elisp/emacs-color-theme-solarized")
 
 (require 'init-loader)
 (init-loader-load "~/.emacs.d/inits")
@@ -31,9 +31,9 @@
 ;;  (color-theme-dark-font-lock)
 ;;  (color-theme-lawrence)
 ;;  (color-theme-resolve)
-  (color-theme-hober)
+;;  (color-theme-hober)
 ;;  (color-theme-billw)
-
+    (color-theme-solarized-dark)
 
 ;; Command-Key and Option-Key
 (setq ns-command-modifier (quote meta))
@@ -42,6 +42,7 @@
 
 )
 
+(set-cursor-color "red")
 
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
