@@ -71,6 +71,8 @@ set shiftwidth=2
 set tabstop=8
 filetype plugin indent on
 
+set cursorline
+
 """ NERDTree 設定 """
 
 " ファイルを指定せずにVimを起動したらNERDTreeを開く
