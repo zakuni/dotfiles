@@ -1,4 +1,4 @@
-set background=light
+set background=dark
 "colorscheme anotherdark
 colorscheme solarized
 "colorscheme desert
@@ -16,7 +16,7 @@ set guioptions-=T
 set guioptions-=m
 
 set nobackup
-set transparency=5
+set transparency=15
 set imdisable
 
 let g:save_window_file = expand('~/.vimwinpos')
