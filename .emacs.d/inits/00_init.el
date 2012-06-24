@@ -16,3 +16,7 @@
 (prefer-coding-system 'utf-8)
 
 (setq-default tab-width 2 indent-tabs-mode nil)
+
+;(setq indent-line-function 'indent-relative-maybe)
+(global-set-key "\C-m" 'newline-and-indent); Returnキーで改行＋オートインデント
+;(global-set-key "\C-m" 'indent-new-comment-line); Returnキーで改行＋オートインデント＋コメント行

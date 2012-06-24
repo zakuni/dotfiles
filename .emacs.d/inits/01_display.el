@@ -7,7 +7,7 @@
 ;;(color-theme-blippblopp)
 
 ;; solarized
-(color-theme-solarized-light)
+(color-theme-solarized-dark)
 (add-hook 'window-setup-hook '(lambda () (set-cursor-color "gray")))
 (add-hook 'after-make-frame-functions '(lambda (f) (with-selected-frame f (set-cursor-color "gray"))))
 
@@ -58,4 +58,4 @@
 
 (global-linum-mode)
 
-
+(set-frame-parameter nil 'alpha 80)
