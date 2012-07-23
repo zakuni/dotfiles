@@ -91,6 +91,7 @@ NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'bbommarito/vim-slim'
 NeoBundle 'tpope/vim-rails'
+NeoBundle 'derekwyatt/vim-scala'
 " vim-scripts repos
 "NeoBundle 'AutoComplPop'
 NeoBundle 'L9'

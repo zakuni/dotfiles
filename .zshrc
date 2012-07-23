@@ -120,6 +120,9 @@ export PATH=$PATH:~/phonegap-android/bin
 
 export GISTY_DIR="$HOME/Documents/gist"
 
+# for Scala
+export JAVA_OPTS="-Dfile.encoding=UTF-8"
+
 # rvm
 if [[ -s $HOME/.rvm/scripts/rvm ]] ; then source $HOME/.rvm/scripts/rvm ; fi
 
