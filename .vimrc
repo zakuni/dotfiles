@@ -1,6 +1,6 @@
 set nocompatible
 
-;" NeoBundle設定ここから """
+""" NeoBundle設定ここから """
 filetype off
 
 if has('win32') || has('win64')
@@ -12,11 +12,69 @@ else
 endif
 
 if has('vim_starting')
-  set runtimepath+=$DOTVIM/bundle/neobundle.vim
-	call neobundle#rc($BUNDLE)
+  set runtimepath+=$DOTVIM/bundle/neobundle.vim/
 endif
 
-;" neocomplecache設定ここから """
+call neobundle#rc($BUNDLE)
+
+" let NeoBndle manage NeoBundle 
+NeoBundle 'Shougo/neobundle.vim'
+
+" recommended to install
+NeoBundle 'Shougo/vimproc'
+" after install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
+
+NeoBundle 'Shougo/vimshell'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neocomplcache-snippets-complete'
+
+" My Bundles here:
+"
+" original repos on github
+NeoBundle 'altercation/vim-colors-solarized'
+"NeoBundle 'tpope/vim-endwise'
+NeoBundle 'ruby-matchit'
+NeoBundle 'digitaltoad/vim-jade'
+NeoBundle 'bbommarito/vim-slim'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'derekwyatt/vim-scala'
+" vim-scripts repos
+"NeoBundle 'AutoComplPop'
+NeoBundle 'L9'
+NeoBundle 'The-NERD-tree'
+NeoBundle 'vim-coffee-script'
+NeoBundle 'Processing'
+NeoBundle 'vim-stylus'
+" NeoBundle 'IndentHL'
+NeoBundle 'Indent-Highlight'
+NeoBundle 'Indent-Guides'
+" NeoBundle 'snipMate'
+" NeoBundle 'processing-snipmate'
+"NeoBundle 'quickrun'
+" non github repos
+"NeoBundle 'git://git.wincent.com/command-t.git'
+
+filetype plugin indent on     " required! 
+
+" Brief help
+" :NeoBundleList          - list configured bundles
+" :NeoBundleInstall(!)    - install(update) bundles
+" :NeoBundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+
+" Installation check.
+if neobundle#exists_not_installed_bundles()
+  echomsg 'Not installed bundles : ' .
+        \ string(neobundle#get_not_installed_bundle_names())
+  echomsg 'Please execute ":NeoBundleInstall" command.'
+  "finish
+endif
+
+""" NeoBundle設定ここまで """
+
+""" neocomplecache設定ここから """
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
 " Use neocomplcache.
 let g:neocomplcache_enable_at_startup = 1
 " Use smartcase.
@@ -31,6 +89,7 @@ let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
 " AutoComplPop like behavior.
 "let g:neocomplcache_enable_auto_select = 1
 
+
 " Define dictionary.
 let g:neocomplcache_dictionary_filetype_lists = {
     \ 'default' : '',
@@ -43,6 +102,12 @@ if !exists('g:neocomplcache_keyword_patterns')
   let g:neocomplcache_keyword_patterns = {}
 endif
 let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
+
+" Plugin key-mappings.
+imap <C-k>     <Plug>(neocomplcache_snippets_expand)
+smap <C-k>     <Plug>(neocomplcache_snippets_expand)
+inoremap <expr><C-g>     neocomplcache#undo_completion()
+inoremap <expr><C-l>     neocomplcache#complete_common_string()
 
 " Recommended key-mappings.
 " <CR>: close popup and save indent.
@@ -72,55 +137,8 @@ let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 
-
-" let NeoBndle manage NeoBundle 
-" required! 
-NeoBundle 'Shougo/neobundle.vim'
-" recommended to install
-NeoBundle 'Shougo/vimproc'
-" after install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
-NeoBundle 'Shougo/vimshell'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neocomplcache'
-
-" My Bundles here:
-"
-" original repos on github
-NeoBundle 'altercation/vim-colors-solarized'
-"NeoBundle 'tpope/vim-endwise'
-NeoBundle 'digitaltoad/vim-jade'
-NeoBundle 'bbommarito/vim-slim'
-NeoBundle 'tpope/vim-rails'
-NeoBundle 'derekwyatt/vim-scala'
-" vim-scripts repos
-"NeoBundle 'AutoComplPop'
-NeoBundle 'L9'
-"NeoBundle 'The-NERD-tree'
-NeoBundle 'vim-coffee-script'
-NeoBundle 'Processing'
-NeoBundle 'vim-stylus'
-" NeoBundle 'IndentHL'
-NeoBundle 'Indent-Highlight'
-NeoBundle 'Indent-Guides'
-" NeoBundle 'snipMate'
-" NeoBundle 'processing-snipmate'
-"NeoBundle 'quickrun'
-" non github repos
-"NeoBundle 'git://git.wincent.com/command-t.git'
-
-filetype plugin indent on     " required! 
-"
-" Brief help
-" :NeoBundleList          - list configured bundles
-" :NeoBundleInstall(!)    - install(update) bundles
-" :NeoBundleSearch(!) foo - search(or refresh cache first) for foo
-" :NeoBundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after NeoBundle command are not allowed..
-""" NeoBundle設定ここまで """
-
 set nobackup
+set noswapfile
 syntax enable
 set background=dark
 
@@ -128,8 +146,6 @@ set expandtab
 set number
 set shiftwidth=2
 set tabstop=8
-filetype plugin indent on
-
 set cursorline
 
 """ NERDTree 設定 """
@@ -197,26 +213,27 @@ colorscheme desert
 "colorscheme twilight
 "colorscheme zmrok
 
-autocmd FileType * let g:AutoComplPop_CompleteOption = '.,w,b,u,t,i'
+
+"autocmd FileType * let g:AutoComplPop_CompleteOption = '.,w,b,u,t,i'
 
 "<TAB>で補完
 " {{{ Autocompletion using the TAB key
 " This function determines, wether we are on the start of the line text (then tab indents) or
 " if we want to try autocompletion
-function! InsertTabWrapper()
-        let col = col('.') - 1
-        if !col || getline('.')[col - 1] !~ '\k'
-                return "\<TAB>"
-        else
-                if pumvisible()
-                        return "\<C-N>"
-                else
-                        return "\<C-N>\<C-P>"
-                end
-        endif
-endfunction
+"function! InsertTabWrapper()
+"        let col = col('.') - 1
+"        if !col || getline('.')[col - 1] !~ '\k'
+"                return "\<TAB>"
+"        else
+"                if pumvisible()
+"                        return "\<C-N>"
+"                else
+"                        return "\<C-N>\<C-P>"
+"                end
+"        endif
+"endfunction
 " Remap the tab key to select action with InsertTabWrapper
-inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+"inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 " }}} Autocompletion using the TAB key
 
 " rbファイル作成時にマジックコメントを追加
@@ -229,7 +246,7 @@ let g:indent_guides_color_change_percent = 5
 
 " unite.vim設定ここから
 " 入力モードで開始する
-let g:unite_enable_start_insert=0
+let g:unite_enable_start_insert=1
 " 縦分割で開く
 " let g:unite_enable_split_vertically = 1
 let g:unite_winwidth = 80
