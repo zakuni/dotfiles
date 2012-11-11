@@ -18,6 +18,7 @@ set guioptions-=m
 set nobackup
 set transparency=15
 set imdisable
+set guifont=Osaka-Mono:h16
 
 let g:save_window_file = expand('~/.vimwinpos')
 augroup SaveWindow
