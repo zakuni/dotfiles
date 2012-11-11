@@ -3,16 +3,16 @@
 (pc-selection-mode 1)
 
 
-(setq make-backup-files nil) ;; ~フ�Ą�¤�Ğ(バッ�Ż�˘ップフ�Ą�¤�Ğ)を生成し�ªい
-(define-key global-map [?¥] [?\\])  ;; ¥�®代�ã�c«バッ�Ż�š�İッ�ˇュを�ฅ力する
+(setq make-backup-files nil) ;; ~ファイル(バックアップファイル)を生成しない
+(define-key global-map [?¥] [?\\])  ;; ¥の代わりにバックスラッシュを入力する
 
 
-;;; �Ť�ĵ�˝�Ğ�®�š滅
+;;; カーソルの点滅
 (blink-cursor-mode t)
 
-; 言語を�������語�«する
+; 言語を日本語にする
 (set-language-environment 'Japanese)
-; 極力UTF-8�¨する
+; 極力UTF-8とする
 (prefer-coding-system 'utf-8)
 
 (setq-default tab-width 2 indent-tabs-mode nil)
