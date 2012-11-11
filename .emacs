@@ -5,11 +5,11 @@
   ;; If there is more than one, they won't work right.
  )
 
-(add-to-list 'load-path "~/.emacs.d/")
-(add-to-list 'load-path "~/.emacs.d/plugins")
-(add-to-list 'load-path (expand-file-name "~/elisp"))
-(add-to-list 'load-path "~/.emacs.d/auto-install")
-(add-to-list 'load-path "~/elisp/emacs-color-theme-solarized")
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/"))
+(add-to-list 'load-path "~/.emacs.d/plugins/")
+(add-to-list 'load-path (expand-file-name "~/elisp/"))
+(add-to-list 'load-path "~/.emacs.d/auto-install/")
+(add-to-list 'load-path "~/elisp/emacs-color-theme-solarized/")
 
 (require 'init-loader)
 (init-loader-load "~/.emacs.d/inits")

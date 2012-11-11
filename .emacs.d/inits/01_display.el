@@ -20,7 +20,7 @@
 (when (>= emacs-major-version 23)
  (set-face-attribute 'default nil
                      :family "monaco"
-                     :height 124)
+                     :height 140)
  (set-fontset-font
   (frame-parameter nil 'font)
   'japanese-jisx0208
@@ -58,4 +58,4 @@
 
 (global-linum-mode)
 
-(set-frame-parameter nil 'alpha 80)
+(set-frame-parameter nil 'alpha 90)
