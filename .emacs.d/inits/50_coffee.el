@@ -1,4 +1,4 @@
-(add-to-list 'load-path "~/.emacs.d/coffee-mode")
+(add-to-list 'load-path "~/.emacs.d/elpa/coffee-mode-0.4.1/")
 (require 'coffee-mode)
 
 (defun coffee-custom ()
