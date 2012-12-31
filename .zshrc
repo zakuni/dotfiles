@@ -123,13 +123,8 @@ export GISTY_DIR="$HOME/Documents/gist"
 # for Scala
 export JAVA_OPTS="-Dfile.encoding=UTF-8"
 
-# rvm
-if [[ -s $HOME/.rvm/scripts/rvm ]] ; then source $HOME/.rvm/scripts/rvm ; fi
-
 . ~/.nvm/nvm.sh
 # nvm use "v0.4.10"
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
