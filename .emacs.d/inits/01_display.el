@@ -1,5 +1,6 @@
 (require 'color-theme)
 (require 'color-theme-solarized)
+;;(load-theme 'solarized-[light|dark] t)
 (color-theme-initialize)
 ;;(color-theme-clarity)
 ;;(color-theme-andreas)
