@@ -8,3 +8,5 @@
 *#*#
 .emacs.d/ac-comphist.dat
 .emacs.d/scala-mode/
+.emacs.d/plugins/
+.emacs.d/themes/
