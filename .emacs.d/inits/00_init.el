@@ -7,7 +7,7 @@
 (define-key global-map [?¥] [?\\])  ;; ¥の代わりにバックスラッシュを入力する
 
 
-;;; カーソルの点滅
+; カーソルの点滅
 (blink-cursor-mode t)
 
 ; 言語を日本語にする
@@ -20,3 +20,6 @@
 ;(setq indent-line-function 'indent-relative-maybe)
 (global-set-key "\C-m" 'newline-and-indent); Returnキーで改行＋オートインデント
 ;(global-set-key "\C-m" 'indent-new-comment-line); Returnキーで改行＋オートインデント＋コメント行
+
+; 変更のあったファイルの自動再読み込み
+(global-auto-revert-mode 1)
