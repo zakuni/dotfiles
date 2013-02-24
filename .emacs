@@ -31,10 +31,6 @@
 ;; 30 追加機能系
 ;; 50 メジャーモード
 
-;;(add-to-list 'load-path "/usr/local/share/emacs/site-lisp/howm")
-;;(setq howm-menu-lang 'ja)
-;;(require 'howm)
-
 
 ;; Terminal上での設定
 (if window-system
@@ -53,20 +49,3 @@
 (setq ns-alternate-modifier (quote super))
 
 )
-
-;(set-cursor-color "red")
-
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-
-;; Beginning of the el4r block:
-;; RCtool generated this block automatically. DO NOT MODIFY this block!
-;;(add-to-list 'load-path "/Users/zakuni/.rvm/rubies/ruby-1.9.3-p125/share/emacs/site-lisp")
-;;(require 'el4r)
-;;(el4r-boot)
-;; End of the el4r block.
-;; User-setting area is below this line.
