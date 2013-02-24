@@ -8,14 +8,15 @@
 ; '(cursor-color "#fcf4dc")
 ; '(custom-safe-themes (quote ("fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" default)))
 ; '(foreground-color "#52676f")
- '(split-width-threshold 100))
+ '(split-width-threshold 100)
+)
 
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/"))
 (add-to-list 'load-path "~/.emacs.d/plugins/")
 (add-to-list 'load-path "~/.emacs.d/themes/")
 (add-to-list 'load-path "~/.emacs.d/themes/emacs-color-theme-solarized")
-(add-to-list 'load-path (expand-file-name "~/elisp/"))
-(add-to-list 'load-path "~/.emacs.d/auto-install/")
+;(add-to-list 'load-path "~/.emacs.d/auto-install/")
+;(add-to-list 'load-path (expand-file-name "~/elisp/"))
 ;(add-to-list 'load-path "~/elisp/emacs-color-theme-solarized/")
 
 (require 'package)
@@ -50,7 +51,6 @@
 ;; Command-Key and Option-Key
 (setq ns-command-modifier (quote meta))
 (setq ns-alternate-modifier (quote super))
-
 
 )
 

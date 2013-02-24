@@ -1,3 +1,2 @@
-(require 'anything)
-(require 'anything-startup)
-(global-set-key (kbd "C-]") 'anything)
+;(require 'anything-startup)
+;(global-set-key (kbd "C-]") 'anything)
