@@ -1,6 +1,8 @@
 (setq tool-bar-mode 1)
-(setq pc-select-selection-keys-only t)
-(pc-selection-mode 1)
+
+;;shift+矢印キーで範囲選択(emacs 24で廃止)
+;(setq pc-select-selection-keys-only t)
+;(pc-selection-mode 1)
 
 
 (setq make-backup-files nil) ;; ~ファイル(バックアップファイル)を生成しない
