@@ -39,6 +39,8 @@ NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'bbommarito/vim-slim'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'derekwyatt/vim-scala'
+NeoBundle 'jpo/vim-railscasts-theme'
+NeoBundle 'Lokaltog/powerline'
 " vim-scripts repos
 "NeoBundle 'AutoComplPop'
 NeoBundle 'L9'
@@ -183,11 +185,12 @@ noremap : ;
 "let g:solarized_termcolors=256
 "colorscheme solarized
 
+colorscheme railscasts
 "colorscheme blue 
 "colorscheme default 
 "colorscheme delek 
 "colorscheme darkblue 
-colorscheme desert 
+"colorscheme desert 
 "colorscheme elflord 
 "colorscheme evening 
 "colorscheme koehler 
@@ -272,3 +275,7 @@ au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 
 
 let g:molokai_original = 1
+
+" let g:Powerline_symbols = 'fancy'
+set laststatus=2
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim

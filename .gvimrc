@@ -1,6 +1,7 @@
 set background=dark
 "colorscheme anotherdark
-colorscheme solarized
+"colorscheme solarized
+colorscheme railscasts
 "colorscheme desert
 
 "起動時フルスクリーン
@@ -18,7 +19,7 @@ set guioptions-=m
 set nobackup
 set transparency=15
 set imdisable
-set guifont=Osaka-Mono:h16
+set guifont=Osaka-Mono\ for\ Powerline:h16
 
 let g:save_window_file = expand('~/.vimwinpos')
 augroup SaveWindow
