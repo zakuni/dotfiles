@@ -10,9 +10,7 @@
 .emacs.d/scala-mode/
 .emacs.d/plugins/
 .emacs.d/themes/
-.emacs.d/elpa/archives/marmalade/archive-contents
-
-.emacs.d/elpa/archives/melpa/archive-contents
+.emacs.d/elpa/
 
 *.DS_Store
 
