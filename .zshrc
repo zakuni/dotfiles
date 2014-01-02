@@ -43,7 +43,6 @@ zstyle ':completion:*' menu select=1
 zstyle ':completion:*' list-colors ''
 
 alias redcar=wrapped_redcar
-alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
 
 autoload history-search-end
 zle -N history-beginning-search-backward-end history-search-end
