@@ -123,9 +123,6 @@ export GISTY_DIR="$HOME/Documents/gist"
 # for Scala
 export JAVA_OPTS="-Dfile.encoding=UTF-8"
 
-. ~/.nvm/nvm.sh
-# nvm use "v0.4.10"
-
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
