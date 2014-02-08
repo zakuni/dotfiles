@@ -29,6 +29,7 @@ NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
 
 " My Bundles here:
 "
@@ -178,8 +179,8 @@ noremap <Esc><Esc> :nohlsearch<CR><Esc>
 
 "for US Keyboard
 "コロンセミコロン入れ変え
-noremap ; :
-noremap : ;
+"noremap ; :
+"noremap : ;
 
 
 " solarized options
