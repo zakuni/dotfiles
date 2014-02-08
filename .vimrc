@@ -1,4 +1,5 @@
 set nocompatible
+let &t_Co=256
 
 """ NeoBundle設定ここから """
 filetype off
