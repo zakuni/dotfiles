@@ -29,7 +29,14 @@
         }
       },
       {
-        "name": "hostname"
+        "name": "hostname",
+        "args": {
+          "only_if_ssh": true
+        }
+      },
+      {
+        "name": "external_ip",
+        "priority": 50
       }
     ]
   }
