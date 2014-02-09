@@ -19,7 +19,8 @@
         "priority": 50
       },
       {
-        "name": "date"
+        "name": "date",
+        "priority": 51
       },
       {
         "name": "date",
@@ -33,6 +34,16 @@
         "args": {
           "only_if_ssh": true
         }
+      },
+      {
+        "name": "branch"
+      },
+      {
+        "name": "battery",
+        "args": {
+          "gamify": true
+        },
+        "priority": 50
       },
       {
         "name": "external_ip",
