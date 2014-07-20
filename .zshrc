@@ -134,3 +134,7 @@ if which tmux 2>&1 >/dev/null; then
   test -z "$TMUX" && (tmux attach || tmux new-session)
 fi
 
+. `brew --prefix`/etc/profile.d/z.sh
+function precmd () {
+  z --add "$(pwd -P)"
+}
