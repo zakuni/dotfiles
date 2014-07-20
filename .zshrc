@@ -138,3 +138,6 @@ fi
 function precmd () {
   z --add "$(pwd -P)"
 }
+
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
