@@ -136,8 +136,6 @@ export JAVA_OPTS="-Dfile.encoding=UTF-8"
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
-
 #Start tmux on every shell login
 ##https://wiki.archlinux.org/index.php/Tmux#Start_tmux_on_every_shell_login
 if which tmux 2>&1 >/dev/null; then
