@@ -42,7 +42,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*' menu select=1
 zstyle ':completion:*' list-colors ''
 
-alias redcar=wrapped_redcar
 #
 # Executes commands at the start of an interactive session.
 #
@@ -70,6 +69,7 @@ setopt hist_ignore_dups     # ignore duplication command history list
 setopt share_history        # share command history data
 setopt auto_pushd
 setopt correct
+# #export PATH=/opt/local/bin:/opt/local/sbin/:$PATH
 
 autoload -U compinit
 compinit
@@ -120,8 +120,6 @@ kterm*|xterm*)
   ;;
 esac
 
-export PATH=/usr/local/bin:$PATH
-#export PATH=/usr/local/bin:/opt/local/bin:/opt/local/sbin/:$PATH
 
 # for Android and PhoneGap
 export PATH=$PATH:/Developer/android-sdk-mac_x86/tools
