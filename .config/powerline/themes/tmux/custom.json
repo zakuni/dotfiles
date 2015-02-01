@@ -3,11 +3,13 @@
     "right": [
       {
         "function": "powerline.segments.common.net.external_ip",
-        "priority": 50
+        "priority": 50,
+        "display": false
       },
       {
         "function": "powerline.segments.common.sys.uptime",
-        "priority": 50
+        "priority": 50,
+        "display": false
       },
       {
         "function": "powerline.segments.common.sys.system_load",
