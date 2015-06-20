@@ -82,8 +82,6 @@ export PATH=$PATH:/Developer/android-sdk-mac_x86/tools
 #export PATH=$PATH:/Developer/android-sdk-mac_x86/platforms
 export PATH=$PATH:~/phonegap-android/bin
 
-export GISTY_DIR="$HOME/Documents/gist"
-
 # for Scala
 export JAVA_OPTS="-Dfile.encoding=UTF-8"
 
