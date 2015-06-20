@@ -1,5 +1,3 @@
-export LANG=ja_JP.UTF-8
-
 #
 # Executes commands at the start of an interactive session.
 #
@@ -12,6 +10,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 # Customize to your needs...
+
+export LANG=ja_JP.UTF-8
+
 autoload history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
