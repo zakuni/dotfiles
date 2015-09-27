@@ -2,28 +2,47 @@ set nocompatible
 let &t_Co=256
 
 """ NeoBundle設定ここから """
-filetype off
-
-if has('win32') || has('win64')
-  let $DOTVIM = expand('~/vimfiles')
-	let $BUNDLE = expand('~/vimfiles/bundle')
-else
-  let $DOTVIM = expand('~/.vim')
-	let $BUNDLE = expand('~/.vim/bundle/')
-endif
+" Note: Skip initialization for vim-tiny or vim-small.
+if 0 | endif
 
 if has('vim_starting')
-  set runtimepath+=$DOTVIM/bundle/neobundle.vim/
+  if &compatible
+    set nocompatible               " Be iMproved
+  endif
+
+  " Required:
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#rc($BUNDLE)
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
 
-" let NeoBndle manage NeoBundle 
-NeoBundle 'Shougo/neobundle.vim'
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
 
-" recommended to install
-NeoBundle 'Shougo/vimproc'
-" after install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
+" My Bundles here:
+" Refer to |:NeoBundle-examples|.
+" Note: You don't set neobundle setting in .gvimrc!
+
+call neobundle#end()
+
+" Required:
+filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+
+NeoBundle 'Shougo/vimproc.vim', {
+\ 'build' : {
+\     'windows' : 'tools\\update-dll-mingw',
+\     'cygwin' : 'make -f make_cygwin.mak',
+\     'mac' : 'make -f make_mac.mak',
+\     'linux' : 'make',
+\     'unix' : 'gmake',
+\    },
+\ }
 
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/unite.vim'
@@ -42,7 +61,6 @@ NeoBundle 'slim-template/vim-slim'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'jpo/vim-railscasts-theme'
-NeoBundle 'Lokaltog/powerline'
 " vim-scripts repos
 "NeoBundle 'AutoComplPop'
 NeoBundle 'L9'
@@ -59,20 +77,13 @@ NeoBundle 'Indent-Guides'
 " non github repos
 "NeoBundle 'git://git.wincent.com/command-t.git'
 
-filetype plugin indent on     " required! 
+NeoBundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+
 
 " Brief help
 " :NeoBundleList          - list configured bundles
 " :NeoBundleInstall(!)    - install(update) bundles
 " :NeoBundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-
-" Installation check.
-if neobundle#exists_not_installed_bundles()
-  echomsg 'Not installed bundles : ' .
-        \ string(neobundle#get_not_installed_bundle_names())
-  echomsg 'Please execute ":NeoBundleInstall" command.'
-  "finish
-endif
 
 """ NeoBundle設定ここまで """
 
@@ -283,6 +294,10 @@ au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 
 let g:molokai_original = 1
 
-" let g:Powerline_symbols = 'fancy'
+" Powerline
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
 set laststatus=2
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+"set showtabline=2
+set noshowmode
