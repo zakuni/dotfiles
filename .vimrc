@@ -25,15 +25,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Refer to |:NeoBundle-examples|.
 " Note: You don't set neobundle setting in .gvimrc!
 
-call neobundle#end()
-
-" Required:
-filetype plugin indent on
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
-
 NeoBundle 'Shougo/vimproc.vim', {
 \ 'build' : {
 \     'windows' : 'tools\\update-dll-mingw',
@@ -79,6 +70,14 @@ NeoBundle 'Indent-Guides'
 
 NeoBundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
+call neobundle#end()
+
+" Required:
+filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
 
 " Brief help
 " :NeoBundleList          - list configured bundles
@@ -204,26 +203,26 @@ noremap <Esc><Esc> :nohlsearch<CR><Esc>
 "colorscheme solarized
 
 colorscheme railscasts
-"colorscheme blue 
-"colorscheme default 
-"colorscheme delek 
-"colorscheme darkblue 
-"colorscheme desert 
-"colorscheme elflord 
-"colorscheme evening 
-"colorscheme koehler 
-"colorscheme morning 
+"colorscheme blue
+"colorscheme default
+"colorscheme delek
+"colorscheme darkblue
+"colorscheme desert
+"colorscheme elflord
+"colorscheme evening
+"colorscheme koehler
+"colorscheme morning
 "colorscheme murphy "なかなか良い
-"colorscheme pablo 
-"colorscheme peachpuff 
-"colorscheme ron 
-"colorscheme shine 
+"colorscheme pablo
+"colorscheme peachpuff
+"colorscheme ron
+"colorscheme shine
 "colorscheme slate "これも良いかも
 "colorscheme torte
-"colorscheme zellner 
+"colorscheme zellner
 "colorscheme 256-jungle
 "colorscheme af
-"colorscheme anotherdark 
+"colorscheme anotherdark
 "colorscheme asu1dark
 "colorscheme bensday
 "colorscheme billw
@@ -274,7 +273,7 @@ let g:unite_enable_start_insert=1
 " 縦分割で開く
 " let g:unite_enable_split_vertically = 1
 let g:unite_winwidth = 80
-let g:unite_winheight = 15 
+let g:unite_winheight = 15
 " バッファ一覧
 noremap <C-U><C-B> :Unite buffer<CR>
 " ファイル一覧
