@@ -28,12 +28,13 @@ zstyle ':prezto:load' pmodule \
   'terminal' \
   'editor' \
   'history' \
-  'autosuggestions' \
   'directory' \
   'spectrum' \
   'utility' \
   'completion' \
+  'syntax-highlighting' \
   'prompt' \
+  'autosuggestions' \
   'git' \
   'tmux'
 
