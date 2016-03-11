@@ -68,8 +68,6 @@ NeoBundle 'Indent-Guides'
 " non github repos
 "NeoBundle 'git://git.wincent.com/command-t.git'
 
-NeoBundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
-
 call neobundle#end()
 
 " Required:
