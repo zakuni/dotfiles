@@ -20,6 +20,9 @@
         "priority": 50
       },
       {
+        "function": "powerline.segments.common.wthr.weather"
+      },
+      {
         "function": "powerline.segments.common.time.date",
         "priority": 51
       },
@@ -30,9 +33,6 @@
           "format": "%H:%M",
           "istime": true
         }
-      },
-      {
-        "function": "powerline.segments.common.wthr.weather"
       },
       {
         "function": "powerline.segments.common.net.hostname",
