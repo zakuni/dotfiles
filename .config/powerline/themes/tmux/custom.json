@@ -32,6 +32,9 @@
         }
       },
       {
+        "function": "powerline.segments.common.wthr.weather"
+      },
+      {
         "function": "powerline.segments.common.net.hostname",
         "args": {
           "only_if_ssh": true
@@ -43,7 +46,8 @@
       {
         "function": "powerline.segments.common.bat.battery",
         "args": {
-          "gamify": true
+          "gamify": false,
+          "format": "{ac_state}♥ {capacity:3.0%}"
         },
         "priority": 50
       }
