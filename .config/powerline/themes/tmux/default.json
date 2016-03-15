@@ -10,6 +10,9 @@
 				"priority": 50
 			},
 			{
+        "function": "powerline.segments.common.wthr.weather"
+      },
+			{
 				"function": "powerline.segments.common.time.date"
 			},
 			{
@@ -21,8 +24,16 @@
 				}
 			},
 			{
-				"function": "powerline.segments.common.net.hostname"
-			}
+        "function": "powerline.segments.common.vcs.branch"
+      },
+			{
+        "function": "powerline.segments.common.bat.battery",
+        "args": {
+          "gamify": false,
+          "format": "{ac_state}♥ {capacity:3.0%}"
+        },
+        "priority": 50
+      }
 		]
 	}
 }
