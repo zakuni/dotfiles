@@ -1,31 +1,22 @@
-set nocompatible
 let &t_Co=256
 
-""" NeoBundle設定ここから """
-" Note: Skip initialization for vim-tiny or vim-small.
-if 0 | endif
-
-if has('vim_starting')
-  if &compatible
-    set nocompatible               " Be iMproved
-  endif
-
-  " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+"dein Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
 endif
 
 " Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
+set runtimepath^=.vim/dein/repos/github.com/Shougo/dein.vim
 
-" Let NeoBundle manage NeoBundle
 " Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
+call dein#begin(expand('.vim/dein'))
 
-" My Bundles here:
-" Refer to |:NeoBundle-examples|.
-" Note: You don't set neobundle setting in .gvimrc!
+" Let dein manage dein
+" Required:
+call dein#add('Shougo/dein.vim')
 
-NeoBundle 'Shougo/vimproc.vim', {
+" Add or remove your plugins here:
+call dein#add('Shougo/vimproc.vim', {
 \ 'build' : {
 \     'windows' : 'tools\\update-dll-mingw',
 \     'cygwin' : 'make -f make_cygwin.mak',
@@ -33,56 +24,44 @@ NeoBundle 'Shougo/vimproc.vim', {
 \     'linux' : 'make',
 \     'unix' : 'gmake',
 \    },
-\ }
-
-NeoBundle 'Shougo/vimshell'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/neosnippet'
-NeoBundle 'Shougo/neosnippet-snippets'
-
-" My Bundles here:
-"
-" original repos on github
-NeoBundle 'altercation/vim-colors-solarized'
-"NeoBundle 'tpope/vim-endwise'
-NeoBundle 'ruby-matchit'
-NeoBundle 'digitaltoad/vim-jade'
-NeoBundle 'slim-template/vim-slim'
-NeoBundle 'tpope/vim-rails'
-NeoBundle 'derekwyatt/vim-scala'
-NeoBundle 'jpo/vim-railscasts-theme'
+\ })
+call dein#add('Shougo/vimshell')
+call dein#add('Shougo/unite.vim')
+call dein#add('Shougo/neocomplcache')
+call dein#add('Shougo/neosnippet.vim')
+call dein#add('Shougo/neosnippet-snippets')
+call dein#add('altercation/vim-colors-solarized')
+call dein#add('tpope/vim-endwise')
+call dein#add('ruby-matchit')
+call dein#add('digitaltoad/vim-jade')
+call dein#add('slim-template/vim-slim')
+call dein#add('tpope/vim-rails')
+call dein#add('derekwyatt/vim-scala')
+call dein#add('jpo/vim-railscasts-theme')
 " vim-scripts repos
-"NeoBundle 'AutoComplPop'
-NeoBundle 'L9'
-NeoBundle 'The-NERD-tree'
-NeoBundle 'vim-coffee-script'
-NeoBundle 'Processing'
-NeoBundle 'vim-stylus'
-" NeoBundle 'IndentHL'
-NeoBundle 'Indent-Highlight'
-NeoBundle 'Indent-Guides'
-" NeoBundle 'snipMate'
-" NeoBundle 'processing-snipmate'
-"NeoBundle 'quickrun'
-" non github repos
-"NeoBundle 'git://git.wincent.com/command-t.git'
+call dein#add('L9')
+call dein#add('The-NERD-tree')
+call dein#add('vim-coffee-script')
+call dein#add('Processing')
+call dein#add('vim-stylus')
+call dein#add('Indent-Highlight')
+call dein#add('Indent-Guides')
 
-call neobundle#end()
+" You can specify revision/branch/tag.
+"call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
+
+" Required:
+call dein#end()
 
 " Required:
 filetype plugin indent on
 
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+  call dein#install()
+endif
 
-" Brief help
-" :NeoBundleList          - list configured bundles
-" :NeoBundleInstall(!)    - install(update) bundles
-" :NeoBundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-
-""" NeoBundle設定ここまで """
+"End dein Scripts-------------------------
 
 """ neocomplecache設定ここから """
 " Disable AutoComplPop.
