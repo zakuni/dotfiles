@@ -10,7 +10,10 @@
 				"priority": 50
 			},
 			{
-        "function": "powerline.segments.common.wthr.weather"
+        "function": "powerline.segments.common.wthr.weather",
+				"args": {
+					"location_query": "tsuruoka, japan"
+				}
       },
 			{
 				"function": "powerline.segments.common.time.date"
