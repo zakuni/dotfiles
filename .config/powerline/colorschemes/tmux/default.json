@@ -12,7 +12,7 @@
     "uptime":                    { "fg": "gray8", "bg": "gray0", "attrs": [] },
     "system_load_gradient":      { "fg": "green_yellow_orange_red", "bg": "gray0", "attrs": [] },
 		"battery":                   { "fg": "gray8", "bg": "gray8", "attrs": [] },
-    "battery_gradient":          { "fg": "GREEN_Orange_red", "bg": "gray0", "attrs": [] },
+    "battery_gradient":          { "fg": "green_yellow_red", "bg": "gray0", "attrs": [] },
     "battery_empty":             { "fg": "gray4", "bg": "gray8", "attrs": [] },
 		"branch":                    { "fg": "gray9", "bg": "gray2", "attrs": [] },
 		"branch_dirty":              { "fg": "brightyellow", "bg": "gray2", "attrs": [] },
