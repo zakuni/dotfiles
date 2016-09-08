@@ -1,4 +1,5 @@
 (setq tool-bar-mode 1)
+(setq ns-use-native-fullscreen nil)
 
 ;;shift+矢印キーで範囲選択(emacs 24で廃止)
 ;(setq pc-select-selection-keys-only t)
