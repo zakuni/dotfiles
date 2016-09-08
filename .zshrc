@@ -32,3 +32,5 @@ function precmd () {
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+
+alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
