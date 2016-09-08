@@ -11,13 +11,10 @@
  '(split-width-threshold 100)
 )
 
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/"))
 (add-to-list 'load-path "~/.emacs.d/plugins/")
 (add-to-list 'load-path "~/.emacs.d/themes/")
 (add-to-list 'load-path "~/.emacs.d/themes/emacs-color-theme-solarized")
 ;(add-to-list 'load-path "~/.emacs.d/auto-install/")
-;(add-to-list 'load-path (expand-file-name "~/elisp/"))
-;(add-to-list 'load-path "~/elisp/emacs-color-theme-solarized/")
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)

@@ -6,6 +6,7 @@
 
 
 (setq make-backup-files nil) ;; ~ファイル(バックアップファイル)を生成しない
+(setq auto-save-list-file-prefix nil)
 (define-key global-map [?¥] [?\\])  ;; ¥の代わりにバックスラッシュを入力する
 
 
