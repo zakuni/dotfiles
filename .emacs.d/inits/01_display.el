@@ -1,22 +1,7 @@
 (require 'color-theme)
-(require 'color-theme-solarized)
-(require 'color-theme-tomorrow)
-;;(load-theme 'solarized-[light|dark] t)
 (color-theme-initialize)
-;;(color-theme-clarity)
-;;(color-theme-andreas)
-;;(color-theme-aliceblue)
-;;(color-theme-blippblopp)
-;(color-theme-tomorrow-night-eighties)
 (load-file "~/.emacs.d/themes/color-theme-railscasts.el")
 (color-theme-railscasts)
-
-;; solarized
-;(color-theme-solarized-dark)
-;(add-hook 'window-setup-hook '(lambda () (set-cursor-color "gray")))
-;(add-hook 'after-make-frame-functions '(lambda (f) (with-selected-frame f (set-cursor-color "gray"))))
-
-;(set-cursor-color "red")
 
 (require 'hl-line)
 (custom-set-faces 
