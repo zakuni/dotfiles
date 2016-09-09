@@ -31,16 +31,6 @@
 
 ;; Terminal上での設定
 (if window-system
-    (color-theme-initialize)
-;;  (color-theme-blippblopp) 
-;;  (color-theme-clarity)
-;;  (color-theme-dark-font-lock)
-;;  (color-theme-lawrence)
-;;  (color-theme-resolve)
-;;  (color-theme-hober)
-;;  (color-theme-billw)
-;    (color-theme-solarized-dark)
-
 ;; Command-Key and Option-Key
 (setq ns-command-modifier (quote meta))
 (setq ns-alternate-modifier (quote super))
