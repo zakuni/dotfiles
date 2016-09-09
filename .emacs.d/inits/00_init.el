@@ -27,3 +27,9 @@
 
 ; 変更のあったファイルの自動再読み込み
 (global-auto-revert-mode 1)
+
+;; save-buffer 時，buffer 末尾に空行が常にあるように
+(setq require-final-newline t)
+
+;; シンボリックリンクを開くときの質問省略
+(setq vc-follow-symlinks t)
