@@ -75,4 +75,5 @@
 (global-linum-mode)
 
 (set-frame-parameter nil 'alpha 90)
+(toggle-frame-fullscreen)
 
