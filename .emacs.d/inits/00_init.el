@@ -22,3 +22,6 @@
 
 ;; シンボリックリンクを開くときの質問省略
 (setq vc-follow-symlinks t)
+
+(require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
+(cask-initialize)

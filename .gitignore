@@ -11,6 +11,7 @@
 .emacs.d/plugins/
 .emacs.d/themes/
 .emacs.d/elpa/
+.emacs.d/.cask/
 
 *.DS_Store
 
