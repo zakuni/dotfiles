@@ -1,3 +1,13 @@
+(setq tool-bar-mode 1)
+(set-frame-parameter nil 'alpha 90)
+(setq ns-use-native-fullscreen nil)
+(toggle-frame-fullscreen)
+
+(global-linum-mode)
+
+; カーソルの点滅
+(blink-cursor-mode t)
+
 (require 'color-theme)
 (color-theme-initialize)
 (load-file "~/.emacs.d/themes/color-theme-railscasts.el")
@@ -56,9 +66,3 @@
 (set-face-background 'whitespace-space "DarkSlateGray")
 (set-face-foreground 'whitespace-tab "LightSlateGray")
 (set-face-background 'whitespace-tab "DarkSlateGray")
-
-(global-linum-mode)
-
-(set-frame-parameter nil 'alpha 90)
-(toggle-frame-fullscreen)
-
