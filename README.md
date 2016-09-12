@@ -1,3 +1,6 @@
+## Prerequisites
+ - [Cask](https://github.com/cask/cask)
+
 ## Using vimrc 
     % ln -s dotfiles/.vimrc ~/.vimrc
     % ln -s dotfiles/.vimrc ~/.gvimrc
