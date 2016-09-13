@@ -1,6 +1,6 @@
 
 ; フルスクリーンショートカットキー
-(global-set-key "\C-x;" 'ns-toggle-fullscreen)
+(global-set-key "\C-x;" 'toggle-frame-fullscreen)
 
 ; undoショートカットキー
 (global-set-key "\C-u" 'undo)
