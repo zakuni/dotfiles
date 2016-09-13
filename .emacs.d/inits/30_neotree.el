@@ -1,1 +1,1 @@
-(require 'neotree)
+(setq neo-smart-open t)
