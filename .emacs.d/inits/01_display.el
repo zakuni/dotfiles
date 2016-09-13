@@ -8,10 +8,7 @@
 ; カーソルの点滅
 (blink-cursor-mode t)
 
-(require 'color-theme)
-(color-theme-initialize)
-(load-file "~/.emacs.d/themes/color-theme-railscasts.el")
-(color-theme-railscasts)
+(load-theme 'railscasts t nil)
 
 (require 'hl-line)
 (custom-set-faces 

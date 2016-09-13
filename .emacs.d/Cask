@@ -19,6 +19,7 @@
 (depends-on "popwin")
 (depends-on "prodigy")
 (depends-on "projectile")
+(depends-on "railscasts-theme" :git "git@github.com:mikenichols/railscasts-theme.git")
 (depends-on "s")
 (depends-on "smartparens")
 (depends-on "smex")
