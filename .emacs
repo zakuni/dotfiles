@@ -11,6 +11,9 @@
 (package-initialize)
 
 (require 'init-loader)
+(require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
+(cask-initialize)
+
 (init-loader-load "~/.emacs.d/inits")
 
 ;; 00 一般設定
