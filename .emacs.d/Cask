@@ -2,6 +2,7 @@
 (source melpa)
 
 (depends-on "async")
+(depends-on "better-defaults")
 (depends-on "bind-key")
 (depends-on "cask")
 (depends-on "dash")

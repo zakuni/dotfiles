@@ -1,4 +1,3 @@
-(setq tool-bar-mode 1)
 (set-frame-parameter nil 'alpha 90)
 (setq ns-use-native-fullscreen nil)
 
