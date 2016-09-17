@@ -7,3 +7,11 @@ if status --is-interactive
 end
 
 alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
+
+set -x LANG ja_JP.UTF-8
+
+# Heroku Toolbelt
+set -x PATH /usr/local/heroku/bin $PATH
+
+set -x GOPATH $HOME/go
+set -x PATH $PATH $GOPATH/bin
