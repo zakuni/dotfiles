@@ -30,7 +30,7 @@
 (depends-on "popwin")
 (depends-on "prodigy")
 (depends-on "projectile")
-(depends-on "railscasts-theme" :git "git@github.com:mikenichols/railscasts-theme.git")
+(depends-on "railscasts-theme")
 (depends-on "s")
 (depends-on "seq")
 (depends-on "shut-up")
