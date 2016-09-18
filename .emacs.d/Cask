@@ -37,6 +37,7 @@
 (depends-on "prodigy")
 (depends-on "projectile")
 (depends-on "railscasts-theme")
+(depends-on "recentf-ext")
 (depends-on "s")
 (depends-on "seq")
 (depends-on "shut-up")
