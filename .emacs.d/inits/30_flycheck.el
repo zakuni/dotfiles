@@ -1,4 +1,6 @@
 (global-flycheck-mode)
+(with-eval-after-load 'flycheck
+  (flycheck-pos-tip-mode))
 
 ;; use eslint with web-mode for jsx files
 (flycheck-add-mode 'javascript-eslint 'web-mode)
