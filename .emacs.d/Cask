@@ -20,6 +20,7 @@
 (depends-on "git-commit")
 (depends-on "git-gutter")
 (depends-on "helm")
+(depends-on "helm-ls-git")
 (depends-on "htmlize")
 (depends-on "idle-highlight-mode")
 (depends-on "init-loader")
