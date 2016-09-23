@@ -28,6 +28,7 @@
 (depends-on "magit")
 (depends-on "magit-popup")
 (depends-on "markdown-mode")
+(depends-on "mocha")
 (depends-on "multiple-cursors")
 (depends-on "neotree")
 (depends-on "nyan-mode")

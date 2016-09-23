@@ -6,6 +6,9 @@
  '(custom-safe-themes
    (quote
     ("3b0a350918ee819dca209cec62d867678d7dac74f6195f5e3799aa206358a983" default)))
+ '(package-selected-packages
+   (quote
+    (mocha yasnippet web-mode use-package smex smartparens recentf-ext railscasts-theme projectile prodigy popwin pallet nyan-mode neotree multiple-cursors markdown-mode magit init-loader idle-highlight-mode htmlize helm-ls-git git-gutter fuzzy flycheck-pos-tip flycheck-cask expand-region exec-path-from-shell drag-stuff better-defaults auto-complete)))
  '(split-width-threshold 100))
 
 (add-to-list 'load-path "~/.emacs.d/plugins/")
