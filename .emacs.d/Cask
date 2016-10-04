@@ -20,6 +20,7 @@
 (depends-on "fuzzy")
 (depends-on "git-commit")
 (depends-on "git-gutter")
+(depends-on "haml-mode")
 (depends-on "helm")
 (depends-on "helm-git-grep")
 (depends-on "helm-ls-git")
