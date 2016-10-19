@@ -14,3 +14,8 @@
 (setq-default flycheck-disabled-checkers
   (append flycheck-disabled-checkers
     '(json-jsonlist)))
+
+(add-hook 'ruby-mode-hook
+          '(lambda ()
+             (setq flycheck-checker 'ruby-rubocop)
+             (flycheck-mode 1)))
