@@ -8,7 +8,7 @@
     ("3b0a350918ee819dca209cec62d867678d7dac74f6195f5e3799aa206358a983" default)))
  '(package-selected-packages
    (quote
-    (puppet-mode rubocop yaml-mode pug-mode counsel swiper coffee-mode mocha yasnippet web-mode use-package smex smartparens railscasts-theme projectile prodigy popwin pallet nyan-mode neotree multiple-cursors markdown-mode magit init-loader idle-highlight-mode htmlize git-gutter fuzzy flycheck-pos-tip flycheck-cask expand-region exec-path-from-shell drag-stuff better-defaults auto-complete)))
+    (async bind-key cask dash f flycheck git-commit haml-mode ivy js2-mode magit-popup package-build s with-editor puppet-mode rubocop yaml-mode pug-mode counsel swiper coffee-mode mocha yasnippet web-mode use-package smex smartparens railscasts-theme projectile prodigy popwin pallet nyan-mode neotree multiple-cursors markdown-mode magit init-loader idle-highlight-mode htmlize git-gutter fuzzy flycheck-pos-tip flycheck-cask expand-region exec-path-from-shell drag-stuff better-defaults auto-complete)))
  '(split-width-threshold 100))
 
 (add-to-list 'load-path "~/.emacs.d/plugins/")

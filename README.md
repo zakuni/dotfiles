@@ -3,6 +3,7 @@ dotfiles of zakuni, by zakuni, for zakuni
 
 ## Configurations Included
  - emacs
+   - [Pallet](https://github.com/rdallasgray/pallet)
  - fish
  - tmux
  - vim
