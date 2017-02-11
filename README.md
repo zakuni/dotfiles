@@ -13,7 +13,15 @@ dotfiles of zakuni, by zakuni, for zakuni
  - [Cask](https://github.com/cask/cask)
 
 ## Using vimrc 
-    % ln -s dotfiles/.vimrc ~/.vimrc
-    % ln -s dotfiles/.vimrc ~/.gvimrc
-    % ln -s dotfiles/.vim ~/.vim
-then open Vim and`:BundleInstall`
+
+  ```sh
+  ln -s dotfiles/.vimrc ~/.vimrc
+  ln -s dotfiles/.vimrc ~/.gvimrc
+  ln -s dotfiles/.vim ~/.vim
+  ```
+
+then open Vim and install dein
+
+  ```vim
+  :call dein#install
+  ```
