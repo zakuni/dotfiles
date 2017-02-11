@@ -1,3 +1,13 @@
+dotfiles of zakuni, by zakuni, for zakuni
+===
+
+## Configurations Included
+ - emacs
+ - fish
+ - tmux
+ - vim
+ - zsh
+
 ## Prerequisites
  - [Cask](https://github.com/cask/cask)
 
