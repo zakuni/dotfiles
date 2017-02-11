@@ -14,14 +14,14 @@ dotfiles of zakuni, by zakuni, for zakuni
 
 ## Using vimrc 
 
-  ```sh
-  ln -s dotfiles/.vimrc ~/.vimrc
-  ln -s dotfiles/.vimrc ~/.gvimrc
-  ln -s dotfiles/.vim ~/.vim
-  ```
+```sh
+ln -s dotfiles/.vimrc ~/.vimrc
+ln -s dotfiles/.vimrc ~/.gvimrc
+ln -s dotfiles/.vim ~/.vim
+```
 
 then open Vim and install dein
 
-  ```vim
-  :call dein#install
-  ```
+```vim
+:call dein#install
+```
