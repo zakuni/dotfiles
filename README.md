@@ -6,7 +6,9 @@ dotfiles of zakuni, by zakuni, for zakuni
    - [Pallet](https://github.com/rdallasgray/pallet)
  - fish
  - tmux
+   - [tpm](https://github.com/tmux-plugins/tpm)
  - vim
+   - [Dein.vim](https://github.com/Shougo/dein.vim)
  - zsh
 
 ## Prerequisites
