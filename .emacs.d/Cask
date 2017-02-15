@@ -48,6 +48,7 @@
 (depends-on "s")
 (depends-on "seq")
 (depends-on "shut-up")
+(depends-on "slim-mode")
 (depends-on "smartparens")
 (depends-on "smex")
 (depends-on "swiper")
