@@ -20,6 +20,8 @@
 ;; save-buffer 時，buffer 末尾に空行が常にあるように
 (setq require-final-newline t)
 
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 ;; シンボリックリンクを開くときの質問省略
 (setq vc-follow-symlinks t)
 
