@@ -7,3 +7,6 @@ if status --is-interactive
         end
     end
 end
+
+# https://github.com/oh-my-fish/theme-default/issues/8#issuecomment-287571670
+set fish_pager_color_progress cyan
