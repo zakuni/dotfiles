@@ -1,7 +1,7 @@
 set -xg PATH ~/anaconda/bin $PATH
 
 if status --is-interactive
-    if test -z (echo $TMUX)
+    if test \( -z (echo $TMUX) \) -a \( -z (echo $VSCODE_PID) \)
         if not test (tmux attach)
             tmux new-session
         end
