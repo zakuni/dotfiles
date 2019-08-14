@@ -1,3 +1,8 @@
 package z
-theme batman
 theme default
+theme eden
+theme fishface
+theme plain
+theme pure
+theme red-snapper
+theme tomita
