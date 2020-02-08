@@ -14,7 +14,13 @@ dotfiles of zakuni, by zakuni, for zakuni
 ## Prerequisites
  - [Cask](https://github.com/cask/cask)
 
-## Using vimrc 
+## fisher
+
+```sh
+ln -s dotfiles/.config/fish/fishfile
+```
+
+## Using vimrc
 
 ```sh
 ln -s dotfiles/.vimrc ~/.vimrc
