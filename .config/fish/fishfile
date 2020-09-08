@@ -1,4 +1,6 @@
 oh-my-fish/theme-default
 fishpkg/fish-git-util
-jethrokuan/z
 cbsghost/fish-legacycolor
+jethrokuan/fzf
+jethrokuan/z
+rbenv/fish-rbenv
