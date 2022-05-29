@@ -12,16 +12,20 @@ set runtimepath^=~/.vim/dein/repos/github.com/Shougo/dein.vim
 call dein#begin(expand('~/.vim/dein'))
 
 " Let dein manage dein
-" Required:
 call dein#add('Shougo/dein.vim')
+if !has('nvim')
+  call dein#add('roxma/nvim-yarp')
+  call dein#add('roxma/vim-hug-neovim-rpc')
+endif
 
 " Add or remove your plugins here:
 call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
 call dein#add('Shougo/vimshell')
-call dein#add('Shougo/unite.vim')
 
 call dein#add('Shougo/ddc.vim')
 call dein#add('vim-denops/denops.vim')
+call dein#add('Shougo/ddu.vim')
+
 " Install your sources
 call dein#add('Shougo/ddc-around')
 
@@ -41,12 +45,10 @@ call dein#add('derekwyatt/vim-scala')
 call dein#add('jpo/vim-railscasts-theme')
 " vim-scripts repos
 call dein#add('L9')
-call dein#add('The-NERD-tree')
+call dein#add('preservim/nerdtree')
 call dein#add('vim-coffee-script')
 call dein#add('Processing')
 call dein#add('vim-stylus')
-call dein#add('Indent-Highlight')
-call dein#add('Indent-Guides')
 
 " You can specify revision/branch/tag.
 "call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
@@ -58,6 +60,8 @@ call dein#end()
 filetype plugin indent on
 
 " If you want to install not installed plugins on startup.
+call map(dein#check_clean(), { _, val -> delete(val, 'rf') })
+call dein#recache_runtimepath()
 if dein#check_install()
   call dein#install()
 endif
@@ -211,35 +215,6 @@ colorscheme railscasts
 
 " rbファイル作成時にマジックコメントを追加
 autocmd BufNewFile *.rb 0r ~/.vim/templates/rb.tpl
-
-" IndentGuides設定
-let g:indent_guides_color_change_percent = 5
-" let g:indent_guides_guide_size = 1
-" let g:indent_guides_start_level = 2
-
-" unite.vim設定ここから
-" 入力モードで開始する
-let g:unite_enable_start_insert=1
-" 縦分割で開く
-" let g:unite_enable_split_vertically = 1
-let g:unite_winwidth = 80
-let g:unite_winheight = 15
-" バッファ一覧
-noremap <C-U><C-B> :Unite buffer<CR>
-" ファイル一覧
-noremap <C-U><C-F> :UniteWithBufferDir -buffer-name=files file<CR>
-" 最近使ったファイルの一覧
-noremap <C-U><C-R> :Unite file_mru<CR>
-" レジスタ一覧
-noremap <C-U><C-Y> :Unite -buffer-name=register register<CR>
-" ファイルとバッファ
-noremap <C-U><C-U> :Unite buffer file_mru<CR>
-" 全部
-noremap <C-U><C-A> :UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR>
-" ESCキーを2回押すと終了する
-au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
-au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
-
 
 let g:molokai_original = 1
 
