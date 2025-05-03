@@ -1,11 +1,5 @@
-set -xg PATH ~/anaconda/bin $PATH
 
-# https://github.com/oh-my-fish/theme-default/issues/8#issuecomment-287571670
-set fish_pager_color_progress cyan
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 
-alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
-
-set -x LANG ja_JP.UTF-8
-
-set -g fish_user_paths "/usr/local/opt/avr-gcc@7/bin" $fish_user_paths
-source ~/.iterm2_shell_integration.(basename $SHELL)
+set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+fish_add_path /usr/local/opt/mongodb-community@4.0/bin
