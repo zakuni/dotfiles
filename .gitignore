@@ -1,28 +1,4 @@
-.vim/dein/*
-*.swp
-
-.emacs.d/ac-comphist.dat
-
-.emacs.d/auto-save-list/.saves-74420-ozawa-no-MacBook-Air.local~
-
-*#*#
-.emacs.d/ac-comphist.dat
-.emacs.d/scala-mode/
-.emacs.d/plugins/
-.emacs.d/themes/
-.emacs.d/elpa/
-.emacs.d/.cask/
+# each folders has its own .gitignore file
 
 *.DS_Store
 
-.emacs.d/url/cookies
-
-.emacs.d/elpa/archives/gnu/archive-contents
-
-.emacs.d/places
-
-.emacs.d/ido.last
-
-.emacs.d/smex-items
-.emacs.d/.emacs.desktop
-.emacs.d/backups

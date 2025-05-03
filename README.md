@@ -11,8 +11,20 @@ dotfiles of zakuni, by zakuni, for zakuni
    - [Dein.vim](https://github.com/Shougo/dein.vim)
  - zsh
 
-## Prerequisites
- - [Cask](https://github.com/cask/cask)
+## Usage
+Install GNU Stow first
+```sh
+brew install stow
+```
+
+add symlinks
+```sh
+cd dotfiles
+stow vim zsh config
+```
+and files/folder inside `vim/` `zsh/` `config/` should be symlinked to `~/`
+
+See README of each folders.
 
 ## fisher
 
@@ -20,16 +32,3 @@ dotfiles of zakuni, by zakuni, for zakuni
 ln -s dotfiles/.config/fish/fishfile
 ```
 
-## Using vimrc
-
-```sh
-ln -s dotfiles/.vimrc ~/.vimrc
-ln -s dotfiles/.vimrc ~/.gvimrc
-ln -s dotfiles/.vim ~/.vim
-```
-
-then open Vim and install dein
-
-```vim
-:call dein#install
-```
