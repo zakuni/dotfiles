@@ -20,7 +20,7 @@ brew install stow
 add symlinks
 ```sh
 cd dotfiles
-stow vim zsh config
+stow vim zsh config # and ony others
 ```
 and files/folder inside `vim/` `zsh/` `config/` should be symlinked to `~/`
 
