@@ -25,10 +25,3 @@ stow vim zsh config
 and files/folder inside `vim/` `zsh/` `config/` should be symlinked to `~/`
 
 See README of each folders.
-
-## fisher
-
-```sh
-ln -s dotfiles/.config/fish/fishfile
-```
-
